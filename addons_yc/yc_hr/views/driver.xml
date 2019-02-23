@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+
+        <record model="ir.ui.view" id="view_driver_tree">
+            <field name="name">driver.tree</field>
+<<<<<<< HEAD
+            <field name="model">yc.driver</field>
+=======
+            <field name="model">driver.main</field>
+>>>>>>> c83cdbda13a1b5bb42e23b74b7722b8c324c3a98
+            <field name="arch" type="xml">
+                <tree string="Driver Tree">
+                    <field name="name"/>
+                    <field name="driver_code"/>
+                    <field name="plate_no"/>
+                    <field name="phone1"/>
+                    <field name="phone2"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_driver_form">
+            <field name="name">driver.form</field>
+<<<<<<< HEAD
+            <field name="model">yc.driver</field>
+=======
+            <field name="model">driver.main</field>
+>>>>>>> c83cdbda13a1b5bb42e23b74b7722b8c324c3a98
+            <field name="arch" type="xml">
+                <form string="Driver form">
+                    <sheet>
+                        <group col="4" colspan="2">
+                            <field name="adder"/>
+                            <field name="add_date"/>
+                            <field name="editor"/>
+                            <field name="edit_date"/>
+                        </group>
+
+                        <group col="4">
+                            <field name="name"/>
+                            <field name="plate_no"/>
+                            <field name="driver_code"/>
+                            <field name="category"/>
+                            <field name="idcard_no"/>
+                            <field name="birth_date"/>
+                            <field name="gender"/>
+                            <field name="birth_place"/>
+                            <field name="phone1"/>
+                            <field name="phone2"/>
+                            <field name="address2"/>
+                            <field name="address1"/>
+                            <field name="refine_price"/>
+                            <field name="carburize_price"/>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="driver_list_action">
+            <field name="name">司機主檔</field>
+<<<<<<< HEAD
+            <field name="res_model">yc.driver</field>
+=======
+            <field name="res_model">driver.main</field>
+>>>>>>> c83cdbda13a1b5bb42e23b74b7722b8c324c3a98
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+<<<<<<< HEAD
+        <menuitem id="hr_menu" name="人事薪資主檔" parent="main_hr_menu"/>
+        <menuitem id="driver_main" name="司機主檔" parent="hr_menu" action="driver_list_action"/>
+=======
+        <menuitem id="humanresource_menu" name="人事薪資主檔" parent="main_hurmanresource_menu"/>
+        <menuitem id="driver_main" name="司機主檔" parent="humanresource_menu" action="driver_list_action"/>
+>>>>>>> c83cdbda13a1b5bb42e23b74b7722b8c324c3a98
+    </data>
+</odoo>

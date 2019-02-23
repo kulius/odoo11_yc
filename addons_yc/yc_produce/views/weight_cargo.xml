@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+<<<<<<< HEAD
+        <!-- produce tree view -->
+        <record model="ir.ui.view" id="produce_tree">
+            <field name="name">produce.tree</field>
+            <field name="model">yc.weight</field>
+            <field name="arch" type="xml">
+                <tree string="Produce Tree">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="time"/>
+                    <field name="driver_id"/>
+                    <field name="person"/>
+=======
+
+        <record model="ir.ui.view" id="produce_tree">
+            <field name="name">produce.tree</field>
+            <field name="model">produce.main</field>
+            <field name="arch" type="xml">
+                <tree string="Produce Tree">
+                    <field name="name"/>
+                    <field name="weight_date"/>
+                    <field name="weight_time"/>
+                    <field name="cargo_driver"/>
+                    <field name="weight_person"/>
+>>>>>>> c83cdbda13a1b5bb42e23b74b7722b8c324c3a98
+                    <field name="car_no"/>
+                    <field name="in_out"/>
+                    <field name="factory"/>
+                </tree>
+            </field>
+        </record>
+
+<<<<<<< HEAD
+
+        <!--produce form-->
+        <record model="ir.ui.view" id="produce_fom">
+            <field name="name">produce.form</field>
+            <field name="model">yc.weight</field>
+            <field name="arch" type="xml">
+                <form string="Produce form">
+                    <sheet>
+                        <group string="過磅單">
+                            <field name="name"/>
+                            <field name="date"/>
+                            <field name="time"/>
+                            <field name="driver_id"/>
+                            <field name="person"/>
+                            <field name="car_no"/>
+                            <field name="in_out"/>
+                            <field name="factory"/>
+                        </group>
+                        <group string="基本資料">
+                            <field name="import_times"/>
+                            <field name="export_times"/>
+                            <field name="plate_no"/>
+                            <field name="total_weight"/>
+                            <field name="curb_weight"/>
+                            <field name="ept_buc_weight"/>
+                            <field name="net_weight"/>
+                            <field name="refine_weight"/>
+                            <field name="carburize_weight"/>
+                            <field name="other1"/>
+                            <field name="other2"/>
+
+                            <!-- One2Many -->
+                            <field name="customer_detail_ids" >
+                                <tree string="Customer Details">
+                                    <field name="customer_id"/>
+                                    <field name="processing_id"/>
+                                    <field name="note"/>
+                                </tree>
+                                <form>
+                                    <group cols="2" colspan="2">
+                                        <field name="customer_id"/>
+                                        <field name="processing_id"/>
+                                        <field name="note"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!--produce action-->
+        <record model="ir.actions.act_window" id="weight_list_action">
+            <field name="name">Produce</field>
+            <field name="res_model">yc.weight</field>
+=======
+        <record model="ir.actions.act_window" id="weight_cargo_list_action">
+            <field name="name">過磅單</field>
+            <field name="res_model">produce.main</field>
+>>>>>>> c83cdbda13a1b5bb42e23b74b7722b8c324c3a98
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first course</p>
+            </field>
+        </record>
+
+<<<<<<< HEAD
+        <menuitem id="main_produce_menu" name="生產"/>
+        <menuitem id="produce_menu" name="生產" parent="main_produce_menu"/>
+
+        <menuitem id="weight_cargo" name="過磅單" parent="produce_menu" action="weight_list_action"/>
+=======
+
+        <menuitem id="main_produce_menu" name="製造"/>
+        <menuitem id="produce_menu" name="製造" parent="main_produce_menu"/>
+        <menuitem id="weight_cargo" name="過磅單" parent="produce_menu" action="weight_cargo_list_action"/>
+>>>>>>> c83cdbda13a1b5bb42e23b74b7722b8c324c3a98
+
+    </data>
+</odoo>
